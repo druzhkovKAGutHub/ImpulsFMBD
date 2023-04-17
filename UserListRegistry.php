@@ -1,12 +1,12 @@
 <?php
 require 'stranichka.html';
+require 'ConnectionImpilFM.php';
 
 try {
-    $ImFM = new PDO('pgsql:host=10.222.222.184;port=5433;dbname=ImpulsFM','postgres','sa');
-}
-catch (PDOException $e) {
-    print('Error - '.$e->getMessage());
-    die();
+    $ImFM = ConnectionImpilFM::Get()->connect();
+    //echo 'A connection to the PostgreSQL database sever has been established successfully.1';
+} catch (\PDOException $e) {
+    echo $e->getMessage();
 }
 
 $Table = '<Table border="1">'.'<thead>
