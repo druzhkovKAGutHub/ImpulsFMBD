@@ -1,0 +1,10 @@
+<VirtualHost *:80>
+DocumentRoot    "c:/ospanel/domains/impuls/public"
+ServerName      "impuls"
+ServerAlias     "impuls" 
+ScriptAlias     /cgi-bin/ "c:/ospanel/domains/impuls/public/cgi-bin/"
+#RewriteEngine   on
+#RewriteBase /	
+#RewriteCond     %{SERVER_NAME} =impuls
+#RewriteRule ^ https://%{SERVER_NAME}%{REQUEST_URI} [END,NE,R=permanent]
+</VirtualHost>
